@@ -135,17 +135,34 @@
                     $result2 = $mysqli->query($sql2);
                     $row2 = $result2->fetch_array(MYSQLI_NUM);
                     $fecha = $row2[0];
-                    $sql3 = "SELECT estado from datos_dispositivos WHERE id_tarjeta= $id";
+                    $sql3 = "SELECT * from datos_dispositivos WHERE id_tarjeta= $id";
                     $result3 = $mysqli->query($sql3);
+                    while ($row3 = $result3->fetch_array(MYSQLI_NUM)) {
+                        $propietario = $row3[3];
+                        $estado = $row3[1];
+                        $ubicacion = $row3[2];   
+                    }
+                    /*$result3 = $mysqli->query($sql3);
                     $row3 = $result3->fetch_array(MYSQLI_NUM);
                     $estado = $row3[0];
+                    $sql7 = "SELECT ubicacion from datos_dispositivos WHERE id_tarjeta= $id";
+                    $result7 = $mysqli->query($sql7);
+                    $row7 = $result7->fetch_array(MYSQLI_NUM);
+                    $ubicacion = $row7[0];
+                    $sql8 = "SELECT propietario from datos_dispositivos WHERE id_tarjeta= $id";
+                    $result8 = $mysqli->query($sql8);
+                    $row8 = $result8->fetch_array(MYSQLI_NUM);
+                    $propietario = $row8[0]; */
                 ?>
                     <tr>
                         <td valign="center" align=center>
                             <?php echo $id; ?>
                         </td>
                         <td valign="center" align=center>
-                            <?php echo "1"; ?>
+                            <?php echo $propietario; ?>
+                        </td>
+                        <td valign="center" align=center>
+                            <?php echo $ubicacion; ?>
                         </td>
                         <td valign="top" align=center>
                             <?php
