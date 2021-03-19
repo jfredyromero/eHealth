@@ -92,7 +92,8 @@
                             <input type="number" class="form-control" name="id_tarjeta" placeholder="ID de la tarjeta..." required>
                         </td>
                         <td style="border: none;" valign="top" align=center colspan=2>
-                            <button style="background-color:#281E5D; color:white" class="btn" type="submit"><i class="fas fa-search"></i><span class="pl-3" >Buscar</span></button>
+                            <i style="background-color:#281E5D; color:white" class="fas fa-search"></i>
+                            <input style="background-color:#281E5D; color:white"  type="submit" name="submit" value= "Buscar">
                         </td>
                     </form>
                 </tr>
@@ -111,11 +112,11 @@
                     <td valign="center" align=center bgcolor="#E1E1E1">
                         <b>Fecha de último registro</b>
                     </td>
-                    <td valign="center" align=center bgcolor="#E1E1E1" width=80px>
-                        <b>Editar</b>
+                    <td valign="center" align=center bgcolor="#E1E1E1" >
+                        <b>Nombre de Tarjeta</b>
                     </td>
                     <td valign="center" align=center bgcolor="#E1E1E1" width=80px>
-                        <b>Eliminar</b>
+                        <b>Editar</b>
                     </td>
                 </tr>
 
@@ -251,3 +252,4 @@
 </body>
 
 </html>
+
