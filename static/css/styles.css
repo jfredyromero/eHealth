@@ -1,0 +1,138 @@
+body{
+    background-color: #281E5D;
+}
+table td {
+	border: 1px solid #000;
+}
+table tr:first-child th { /* primera fila */
+	border-top: none;
+  background-color: #281E5D;
+}
+table tr:last-child td { /* ultima fila */
+	border-bottom: none;
+}
+table th:first-child,
+table td:first-child { /* primera columna */
+	border-left: none;
+}
+table th:last-child,
+table td:last-child { /* ultima columna */
+	border-right: none;
+}
+@media only screen and (min-width: 1000px) {
+  #home{
+    margin: 0px 250px 50px 250px;
+    background-color: white;
+  }
+  #home-title{
+      margin: 50px 250px 10px;
+      color: white;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  #home{
+    margin: 0px;
+    background-color: white;
+  }
+  #home-title{
+      margin: 50px 50px 10px;
+      color: white;
+  }
+}
+#page-content{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+nav{
+    background-color: #9C9496;
+    font-size: 18px;
+}
+.navbar-brand{
+    font-size: 24px;
+}
+.navbar-text li{
+    text-align: center;
+}
+.middle {
+position: relative;
+width: 100%;
+}
+.slider {
+position: relative;
+z-index: 1;
+height: 10px;
+margin: 0 15px;
+}
+.slider > .l-track {
+position: absolute;
+z-index: 1;
+left: 25%;
+right: 0;
+top: 0;
+bottom: 0;
+border-radius: 5px;
+background-color: #ADD8E6;
+}
+.slider > .r-track {
+position: absolute;
+z-index: 1;
+left: 0;
+right: 25%;
+top: 0;
+bottom: 0;
+border-radius: 5px;
+background-color: #ffa420;
+}
+.slider > .range {
+position: absolute;
+z-index: 2;
+left: 25%;
+right: 25%;
+top: 0;
+bottom: 0;
+border-radius: 5px;
+background-color: #008f39;
+}
+.slider > .thumb {
+position: absolute;
+z-index: 3;
+width: 30px;
+height: 30px;
+background-color: #281E5D;
+border-radius: 50%;
+box-shadow: 0 0 0 0 rgba(98,0,238,.1);
+transition: box-shadow .3s ease-in-out;
+}
+.slider > .thumb.left {
+left: 25%;
+transform: translate(-15px, -10px);
+}
+.slider > .thumb.right {
+right: 25%;
+transform: translate(15px, -10px);
+}
+.slider > .thumb.hover {
+box-shadow: 0 0 0 20px rgba(98,0,238,.1);
+}
+.slider > .thumb.active {
+box-shadow: 0 0 0 40px rgba(98,0,238,.2);
+}
+
+input[type=range] {
+position: absolute;
+pointer-events: none;
+-webkit-appearance: none;
+z-index: 2;
+height: 10px;
+width: 100%;
+opacity: 0;
+}
+input[type=range]::-webkit-slider-thumb {
+pointer-events: all;
+width: 30px;
+height: 30px;
+border-radius: 0;
+border: 0 none;
+background-color: red;
+-webkit-appearance: none;
+}
